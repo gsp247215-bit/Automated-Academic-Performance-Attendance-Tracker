@@ -1,0 +1,15 @@
+When pushing your repository to GitHub, verify that the following files are present:
+
+README.md (Included above)
+
+statement.md (Included above)
+
+pom.xml (Project Maven configuration)
+
+.gitignore (Configured to ignore target/, .idea/, and .class files)
+
+src/main/java/com/academic/tracker/ (All 7 Java source files)
+
+src/test/java/com/academic/tracker/PredictionEngineTest.java (JUnit test file)
+
+students.csv (Sample input dataset)
