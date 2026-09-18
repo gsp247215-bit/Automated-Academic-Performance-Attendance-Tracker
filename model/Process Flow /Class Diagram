@@ -1,0 +1,30 @@
++-------------------------------------------------------+
+|                       Student                         |
++-------------------------------------------------------+
+| - id: String                                          |
+| - name: String                                        |
+| - attendancePercentage: double                        |
+| - studyHoursPerWeek: double                           |
+| - currentMarks: double                                |
+| - predictedMarks: double                              |
+| - riskLevel: RiskLevel                                |
++-------------------------------------------------------+
+| + Student(id, name, attendance, hours, marks)         |
+| + getPredictedMarks(): double                         |
+| + setPredictedMarks(marks: double): void              |
+| + getRiskLevel(): RiskLevel                           |
+| + setRiskLevel(level: RiskLevel): void                |
++-------------------------------------------------------+
+                           ▲
+                           │ uses
++--------------------------┴----------------------------+
+|                  StudentRepository                    |
++-------------------------------------------------------+
+| + loadFromCSV(filePath: String): List<Student>        |
+| - validateStudentData(att, hrs, marks): void          |
++-------------------------------------------------------+
+                           │
+                           ▼ throws
++-------------------------------------------------------+
+|                 InvalidDataException                  |
++-------------------------------------------------------+
