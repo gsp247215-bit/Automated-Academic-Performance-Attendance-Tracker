@@ -1,0 +1,13 @@
+Main            Repository           PredictionEngine          RiskService          ReportGenerator
+ │                  │                       │                       │                      │
+ │──loadFromCSV()──►│                       │                       │                      │
+ │◄─List<Student>───│                       │                       │                      │
+ │                                          │                       │                      │
+ │──trainAndPredict(students)──────────────►│                       │                      │
+ │◄─(Predictions calculated)────────────────│                       │                      │
+ │                                                                  │                      │
+ │──evaluateRisk(students)─────────────────────────────────────────►│                      │
+ │◄─(Risk levels assigned)──────────────────────────────────────────│                      │
+ │                                                                                         │
+ │──printConsoleReport(students, map)─────────────────────────────────────────────────────►│
+ │──exportSummaryCSV(outputPath, students)────────────────────────────────────────────────►│
