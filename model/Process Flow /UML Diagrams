@@ -1,0 +1,16 @@
+Use Case Diagram
+┌──────────────────────────────────────────────┐
+                   │    Academic Tracker System                   │
+                   │                                              │
+                   │   (( Parse Student CSV Data ))               │
+                   │               ▲                              │
+                   │               │ <<include>>                  │
+   ┌───────────┐   │   (( Validate & Trap Input Errors ))         │
+   │           │───┼─►                                            │
+   │ Instructor│   │   (( Run Grade Prediction Engine ))           │
+   │  / Admin  │───┼─►                                            │
+   │           │   │   (( Evaluate Risk Tiers ))                  │
+   └───────────┘───┼─►                                            │
+                   │   (( Export Summary CSV Report ))            │
+                   │                                              │
+                   └──────────────────────────────────────────────┘
