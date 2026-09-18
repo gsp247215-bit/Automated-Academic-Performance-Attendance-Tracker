@@ -1,0 +1,9 @@
+Storage & Schema Design (Flat File CSV)
+Input Schema (students.csv):
+ID,Name,Attendance,StudyHours,Marks
+S101,John Doe,85.0,12.5,78.0
+S102,Jane Smith,60.0,4.0,45.0
+Output Schema (academic_risk_report.csv):
+StudentID,Name,Attendance,StudyHours,CurrentMarks,PredictedMarks,RiskLevel
+S101,John Doe,85.00,12.50,78.00,81.25,LOW_RISK
+S102,Jane Smith,60.00,4.00,45.00,42.10,CRITICAL_RISK
