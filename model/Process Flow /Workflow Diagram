@@ -1,0 +1,27 @@
+[Start]
+    │
+    ▼
+[Check / Seed 'students.csv']
+    │
+    ▼
+[StudentRepository.loadFromCSV()] ──(Malformed Row?)──► [Log Warning & Skip Line]
+    │
+    ▼
+[PredictionEngine.trainAndPredict()]
+    │  ├─ Compute Mean X (Hours) & Mean Y (Marks)
+    │  ├─ Compute Slope (Beta) & Intercept (Alpha)
+    │  └─ Assign Predicted Marks (Bounded 0-100)
+    │
+    ▼
+[RiskAssessmentService.evaluateRisk()]
+    │  ├─ Attendance < 65% OR Pred < 40  ==> CRITICAL_RISK
+    │  ├─ Attendance < 75% OR Pred < 60  ==> MEDIUM_RISK
+    │  └─ Else                           ==> LOW_RISK
+    │
+    ▼
+[ReportGenerator]
+    │  ├─ Print Formatted Console Dashboard
+    │  └─ Export 'academic_risk_report.csv'
+    │
+    ▼
+  [End]
